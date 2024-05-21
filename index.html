@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Generator</h1>
+        <div class="form-container">
+            <form id="imageForm">
+                <div class="form-group">
+                    <label for="background">Background Color:</label>
+                    <input type="color" id="background" name="background" value="#FFF2D7">
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Text:</label>
+                    <input type="text" id="text" name="text" placeholder="Enter text here">
+                </div>
+
+                <div class="form-group">
+                    <label for="textColor">Text Color:</label>
+                    <input type="color" id="textColor" name="textColor" value="#D8AE7E">
+                </div>
+
+                <div class="form-group">
+                    <label for="ratio">Aspect Ratio:</label>
+                    <select id="ratio" name="ratio">
+                        <option value="1:1">1:1</option>
+                        <option value="4:3">4:3</option>
+                        <option value="16:9">16:9</option>
+                        <option value="3:2">3:2</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="includeBackground">Include Background:</label>
+                    <input type="checkbox" id="includeBackground" name="includeBackground" checked>
+                </div>
+
+                <div class="form-group">
+                    <label for="format">Image Format:</label>
+                    <select id="format" name="format">
+                        <option value="png">PNG</option>
+                        <option value="jpeg">JPEG</option>
+                        <option value="bmp">BMP</option>
+                        <option value="webp">WEBP</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <div class="text-alignment">
+                        <span>Text Alignment:</span>
+                        <div class="alignment-options">
+                            <label>
+                                <input type="radio" name="textAlign" value="left" checked>
+                                Left
+                            </label>
+                            <label>
+                                <input type="radio" name="textAlign" value="center">
+                                Center
+                            </label>
+                            <label>
+                                <input type="radio" name="textAlign" value="right">
+                                Right
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit">Generate Image</button>
+            </form>
+        </div>
+        <canvas id="canvas"></canvas>
+        <button id="downloadBtn">Download Image</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
